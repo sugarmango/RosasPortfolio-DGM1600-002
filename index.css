@@ -1,4 +1,6 @@
-html {
+* {
+margin: 0;
+padding: 0;
 box-sizing: border-box;
 }
 
@@ -8,21 +10,64 @@ display: flex;
 justify-content: flex-end;
 width: 100%;
 background-color: lightblue;
+width: 100%;
+position: fixed;
 }
+
+html {
+    scroll-behavior: smooth;
+  }
 
 .nav-list {
 display: flex;
 justify-content: flex-end;
 list-style-type: none;
+margin-right: 1rem;
+font-family: 'Courier New', Courier, monospace;
+font-weight: bold;
 }
+
 
 /*.nav-list ul {
     list-style-type: none;
 } */
 
-a {
+.nav-list a {
+    display: block;
     text-decoration: none;
     color: #f0f0f0;
+    padding: 1.5rem;
+    font-size: xx-large;
+}
+
+.nav-list a:hover {
+    background-color: hotpink;
+}
+
+#welcome-section {
+background-color: lightyellow;
+height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+#projects {
+    display: flex;
+    justify-content: center;
+}
+
+.projects-grid {
+width: 1280px;
+display: flex;
+flex-wrap: wrap;
+
+}
+
+.project-tile {
+margin: 2rem;
+
 }
 
 h1 {
@@ -32,9 +77,14 @@ h1 {
     align-content: center;
 }
 
+#contact {
+    height: 20vh;
+    background-color: lightblue;
+}
+
 h2 {
-    color: plum;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:#f0f0f0;
+    font-family: 'Courier New', Courier, monospace;
     font-size: large;
     align-content: flex-start;
 }
