@@ -98,7 +98,7 @@ h1 {
     align-content: center;
 }
 
-section h4 {
+#welcome-section h4 {
     color: hotpink;
     font-family: 'Courier New', Courier, monospace;
     font-size: larger;
@@ -110,7 +110,7 @@ section h4 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 320px;
+    height: 240px;
     background-color: lightblue;
     font-size: 2rem;
 }
@@ -121,7 +121,7 @@ section h4 {
     font-family: 'Courier New', Courier, monospace;
 }
 
-#contact-div {
+#contact div {
 display: flex;
 justify-content: center;
 color: #f0f0f0;
@@ -136,6 +136,7 @@ transition: transform 0.3s linear;
 
 #contact div a:hover {
     transform: translateY(8px);
+
 }
 
 footer {
