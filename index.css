@@ -4,19 +4,30 @@ padding: 0;
 box-sizing: border-box;
 }
 
-
-#navbar {
-display: flex;    
-justify-content: flex-end;
-width: 100%;
-background-color: lightblue;
-width: 100%;
-position: fixed;
-}
-
 html {
     scroll-behavior: smooth;
   }
+
+  @media (max-width: 1200px) {
+    html {
+      font-size: 80%;
+      color: hotpink;
+    }
+  }
+  
+  /* 980px / 16px = 61.25em */
+  @media (max-width: 980px) {
+    html {
+      font-size: 40%;
+      color:blue;
+    }
+  }
+
+#navbar {   
+width: 100%;
+background-color: lightblue;
+position: fixed;
+}
 
 .nav-list {
 display: flex;
@@ -28,13 +39,8 @@ font-weight: bold;
 }
 
 
-/*.nav-list ul {
-    list-style-type: none;
-} */
-
 .nav-list a {
     display: block;
-    text-decoration: none;
     color: #f0f0f0;
     padding: 1.5rem;
     font-size: xx-large;
@@ -44,30 +50,45 @@ font-weight: bold;
     background-color: hotpink;
 }
 
+a {
+    text-decoration: none;
+  }
+
 #welcome-section {
-background-color: lightyellow;
+background-color: rgb(250, 250, 204);
+background: linear-gradient(to top, black, 20% lightyellow);
 height: 100vh;
 display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
+font-size: 3rem;
 }
 
 #projects {
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 0;
+    background-color: rgb(250, 250, 204);
 }
 
+#projects h3 {
+    font-size: 3rem;
+    color: #f0f0f0;
+    font-family: 'Courier New', Courier, monospace;
+  }
+
 .projects-grid {
-width: 1280px;
 display: flex;
+justify-content: center;
 flex-wrap: wrap;
 
 }
 
 .project-tile {
 margin: 2rem;
-
 }
 
 h1 {
@@ -77,9 +98,54 @@ h1 {
     align-content: center;
 }
 
+section h4 {
+    color: hotpink;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: larger;
+    align-content: center; 
+}
+
 #contact {
-    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 320px;
     background-color: lightblue;
+    font-size: 2rem;
+}
+
+#contact h1, h4 {
+    padding-bottom: 2rem;
+    color: #f0f0f0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#contact-div {
+display: flex;
+justify-content: center;
+color: #f0f0f0;
+}
+
+#contact div a {
+padding: 2rem;
+color: #f0f0f0;
+text-shadow: 4px 4px 4px pink;
+transition: transform 0.3s linear;
+}
+
+#contact div a:hover {
+    transform: translateY(8px);
+}
+
+footer {
+   display: block;
+   background-color: lightblue;
+    text-align: center;
+    padding: 1rem;
+    font-size: x-large;
+    color: #f0f0f0;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 h2 {
