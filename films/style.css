@@ -1,9 +1,12 @@
 header {
+    font-size:xx-large;
+    font-family: ;
     background-color: hotpink;
     color: ivory;
 }
 
 main {
+    padding-top: .5em;
     background-color: black;
     color: #fff;
 }
