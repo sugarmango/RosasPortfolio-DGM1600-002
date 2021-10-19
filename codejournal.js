@@ -54,3 +54,12 @@
      // watch out for data type issues here!
      return one + two; // if numbers, will add them.  If strings, will concatenate.
    } 
+
+   // Arrow Functions
+
+   element => console.log(element) //implicit 'return' when only one line for the function
+   element => {
+     let foo = 'bar' + 'baxz'
+     return console.log(element) //explicit 'return' because ofmultiple lines
+   }
+   (num1, num2) => num1 + num2
