@@ -2,13 +2,13 @@ import { films } from '../data/films.js'
 
 let filmList = document.querySelector('#filmList')
 
-let titleList = document.createElement('ol')
 
-filmList.appendChild(titleList)
 
-let poster = document.createElement('img')
+let figure = document.createElement('figure')
+let figImg = document.createElement('img')
+figImg.src =  `https://starwars-visualguide.com/assets/img/films/1.jpg`
+let figCaption = document.createElement('figcaption')
 
-poster.src = `https://starwars-visualguide.com/assets/img/films/1.jpg`
 
 filmList.appendChild(poster)
 
