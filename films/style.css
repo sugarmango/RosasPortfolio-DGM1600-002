@@ -5,8 +5,24 @@ header {
     color: ivory;
 }
 
+figure { 
+    background-color: rgba(138, 136, 136, 0.295);
+  }
+  
+  img {
+    border: 8px solid paleturquoise;
+  }
+
+  figcaption {
+    color: #fff;
+    text-align: center;
+    font-size: xx-large;
+  }
+
 main {
-    padding-top: .5em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     background-color: black;
     color: #fff;
 }
