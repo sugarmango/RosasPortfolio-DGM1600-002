@@ -118,6 +118,11 @@ flex-wrap: wrap;
 
 .project-tile {
 margin: 2rem;
+transition: transform 0.3s linear;
+}
+
+.project-tile:hover {
+  transform: translateY(8px)
 }
 
 h1 {
