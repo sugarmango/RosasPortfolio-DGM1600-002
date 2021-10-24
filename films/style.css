@@ -1,8 +1,11 @@
 header {
     font-size:xx-large;
-    font-family: ;
+    font-family: font-family: 'Montserrat', sans-serif;
     background-color: hotpink;
+    font-weight: bold;
     color: ivory;
+    display: flex;
+    justify-content: center;
 }
 
 figure { 
@@ -16,6 +19,8 @@ figure {
   figcaption {
     color: #fff;
     text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
     font-size: xx-large;
   }
 
