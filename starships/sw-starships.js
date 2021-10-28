@@ -1,5 +1,5 @@
 import { starships } from "../data/starships.js";
-import { getLastNumber } from "../utils/index.js";
+import { getLastNumber, removeChildren } from "../utils/index.js";
 
 const nav = document.querySelector('.nav')
 const navList = document.querySelector('.navList')
@@ -22,9 +22,10 @@ anchorWrap.addEventListener('click', () => populateShipView(starship) )
 populateNav()
 
 function populateShipView(shipData) {
+    removeChildren(shipView)
 console.log(`You clicked on ${shipData.name}`)
 let shipImage = document.createElement('img')
-ley shipNum = getLastNumber(shipData.url)
+let shipNum = getLastNumber(shipData.url)
 shipImage.src = `https://starwars-visualguide.com/assets/img/starships/${shipNum}.jpg`
 shipView.appendChild(shipImage)
 }
