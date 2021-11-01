@@ -6,23 +6,27 @@
 header {
     display: flex;
     justify-content: space-around;
-    background-color: cadetblue;
+    background-color: black;
     padding: 2em 0;
 }
 
 button {
     font-size: x-large;
-    background-color: cyan;
+    background-color: rgb(42, 43, 43);
+    color: whitesmoke;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
     border-radius: 10px;
 }
 
 button:hover {
-    background-color: darkmagenta;
+    background-color: pink;
 }
 
 main {
     display: flex;
     flex-wrap: wrap;
+    background-color: black;
 }
 
 figure {
@@ -32,3 +36,17 @@ figure {
 figure img {
     width: 200px;
 }
+
+figcaption {
+    background-color: rgb(85, 83, 85);
+    color: whitesmoke;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    border-radius: 3px;
+    text-align: center;
+    text-shadow: 4px 4px 4px pink;
+}
+
+/* Start https://www.cursors-4u.com */ 
+* {cursor: url(https://cur.cursors-4u.net/others/oth-1/oth28.cur), auto !important;} 
+/* End https://www.cursors-4u.com */
