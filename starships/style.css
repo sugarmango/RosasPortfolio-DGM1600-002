@@ -36,3 +36,7 @@ section {
     font-size: x-large;
     color: pink;
 }
+
+/* Start of cursor, obtained from https://www.cursors-4u.com */ 
+* {cursor: url(https://cur.cursors-4u.net/others/oth-1/oth28.cur), auto !important;} 
+/* End of cursor */
