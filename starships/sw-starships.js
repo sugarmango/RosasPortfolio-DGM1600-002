@@ -5,13 +5,15 @@ const nav = document.querySelector('.nav');
 const navList = document.querySelector('.navList');
 const shipView = document.querySelector('.shipViewer');
 
-const modal = document.querySelector('.modal');
-const closeButton = document.querySelector('.modal-close');
-const modalBackground = document.querySelector('.modal-background');
-const shipMessage
+const modal = document.querySelector('.modal')
+const closeButton = document.querySelector('.modal-close')
+const modalBackground = document.querySelector('.modal-background')
+const shipMessage = document.querySelector('.shipMessage')
 
-closeButton.addEventListener('click', () => modal.classList.toggle('is-active'));
-modalBackground.addEventListener('click', () => modal.classList.toggle('is-active'));
+closeButton.addEventListener('click', () => modal.classList.toggle('is-active'))
+modalBackground.addEventListener('click', () =>
+  modal.classList.toggle('is-active')
+)
 
 function populateNav() {
 	starships.forEach((starship) => {
@@ -31,7 +33,6 @@ populateNav();
 
 function populateShipView(shipData) {
 	removeChildren(shipView);
-	console.log(`You clicked on ${shipData.name}`);
 	let shipImage = document.createElement('img');
     let shipName = document.createElement('div')
     shipName.className = 'shipName'
