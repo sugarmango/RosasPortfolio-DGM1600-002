@@ -6,7 +6,6 @@
 .senators {
     display: flex;
     flex-wrap: wrap;
-
 }
 
 figure {

@@ -1,27 +1,34 @@
 header {
     font-size:xx-large;
-    font-family: font-family: 'Montserrat', sans-serif;
-    background-color: hotpink;
-    font-weight: bold;
+    font-family: 'Rock Salt', cursive;
+    background-color: #fad0c4;
+background-image: linear-gradient(315deg, #fad0c4 0%, #f1a7f1 74%);
+    font-weight: bolder;
     color: ivory;
     display: flex;
     justify-content: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden
+    transition: .5s;
+    letter-spacing: 3px;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
 }
 
 figure { 
-    background-color: rgba(138, 136, 136, 0.295);
+  background-image: linear-gradient(315deg, #f9c5d1 0%, #9795ef 74%);;
   }
   
   img {
-    border: 8px solid paleturquoise;
+    border: 8px solid rgba(175, 238, 238, 0.692);
   }
 
   figcaption {
     color: #fff;
     text-align: center;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Rock Salt', cursive;
     font-weight: bold;
-    font-size: xx-large;
+    font-size: larger;
   }
 
 main {
@@ -32,6 +39,9 @@ main {
     color: #fff;
 }
 
-/* Start of cursor, obtained from https://www.cursors-4u.com */ 
-* {cursor: url(https://cur.cursors-4u.net/others/oth-1/oth28.cur), auto !important;} 
+/* Start of cursor */
+* {cursor: url(https://cur.cursors-4u.net/mechanics/mec-2/mec156.cur), auto !important;} 
 /* End of cursor */
+
+/*background-color: #5de6de;
+background-image: linear-gradient(315deg, #5de6de 0%, #b58ecc 74%);
