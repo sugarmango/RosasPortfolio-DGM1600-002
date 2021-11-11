@@ -10,5 +10,14 @@
 
 figure {
     width: 160px;
-    height: 200px;
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+    border: 2px solid pink;
 }
+
+figcaption {
+    text-align: center;
+}
+
+
