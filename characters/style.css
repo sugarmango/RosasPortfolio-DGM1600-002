@@ -1,7 +1,5 @@
 * {
     margin: 0;
-    box-shadow: 0 0 5px #03e9f4;
-    
 }
 
 header {
@@ -12,6 +10,50 @@ header {
     flex-direction: row;
 }
 
+#navbar {   
+    width: 100%;
+    background-color:pink;
+    
+    }
+    
+    #navbar ul{
+        margin-block-start: 0px;
+        margin-block-end: 0px;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        padding-inline-start: 0px;
+    }
+    
+    .nav-list {
+    display: flex;
+    list-style-type: none;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    }
+    
+    
+    .nav-list a {
+        color: #f0f0f0;
+        padding: 0px 30px;
+        text-shadow: 4px 4px 4px pink;
+        font-size: xx-large;
+    }
+    
+    .nav-list a:hover {
+        background-color:#F2B6CC;
+    }
+    
+    a {
+        text-decoration: none;
+      }
+body {
+    background-color: #050801;
+}
+
+main {
+    min-height: 300px;
+}
 /*Buttons start*/
 
 
@@ -64,6 +106,7 @@ main {
 
 figure {
     margin: 8px;
+    box-shadow: 0 0 5px #03e9f4;
 }
 
 figure img {
@@ -80,6 +123,53 @@ figcaption {
     text-shadow: 4px 4px 4px pink;
 }
 
+#contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    background-color:black;
+    font-size: 2rem;
+}
+
+#contact h1, h4 {
+    padding-bottom: 2rem;
+    color: #f0f0f0;
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: 4px 4px 4px pink;
+}
+
+#contact div {
+display: flex;
+justify-content: center;
+color: #f0f0f0;
+text-shadow: 4px 4px 4px pink;
+}
+
+#contact div a {
+text-decoration: none;    
+padding: 2rem;
+color: #f0f0f0;
+text-shadow: 4px 4px 4px pink;
+transition: transform 0.3s linear;
+}
+
+#contact div a:hover {
+    transform: translateY(8px);
+
+}
+
+footer {
+    display: block;
+    background-color: black;
+     text-align: center;
+     padding: 1rem;
+     font-size: x-large;
+     color: #f0f0f0;
+     text-shadow: 4px 4px 4px pink;
+     font-family: 'Montserrat', sans-serif;
+ }
 /* Start of cursor, obtained from https://www.cursors-4u.com */ 
 * {cursor: url(https://cur.cursors-4u.net/others/oth-1/oth28.cur), auto !important;} 
 /* End of cursor */
