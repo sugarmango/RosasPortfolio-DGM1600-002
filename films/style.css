@@ -16,7 +16,7 @@ background-image: linear-gradient(315deg, #fad0c4 0%, #f1a7f1 74%);
 }
 
 figure { 
-  background-image: linear-gradient(315deg, #f9c5d1 0%, #9795ef 74%);;
+  background-image: linear-gradient(315deg, #f9c5d1 0%, #9795ef 74%);
   }
   
   img {
@@ -39,6 +39,56 @@ main {
     color: #fff;
 }
 
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  font-size: 2rem;
+}
+
+#contact div#project, #contact div#touch {
+  padding-bottom: 2rem;
+  color: #f0f0f0;
+  font-family: 'Montserrat', sans-serif;
+  text-shadow: 4px 4px 4px pink;
+  font-weight: bolder;
+}
+
+#contact div#profiles {
+display: flex;
+justify-content: center;
+color: #f0f0f0;
+text-shadow: 4px 4px 4px pink;
+padding-bottom: 2em;
+}
+
+#contact div#profiles a {
+text-decoration: none;    
+padding: 2rem;
+color: #f0f0f0;
+text-shadow: 4px 4px 4px pink;
+transition: transform 0.3s linear;
+}
+
+#contact div#profiles a:hover {
+  transform: translateY(8px);
+
+}
+
+footer {
+  display: block;
+  background-image: linear-gradient(315deg, #f9c5d1 0%, #9795ef 74%);
+   text-align: center;
+   padding: 2rem;
+   padding-top: 5rem;
+   font-size: x-large;
+   color: #f0f0f0;
+   text-shadow: 4px 4px 4px pink;
+   font-family: 'Montserrat', sans-serif;
+}
 /* Start of cursor */
 * {cursor: url(https://cur.cursors-4u.net/mechanics/mec-2/mec156.cur), auto !important;} 
 /* End of cursor */
