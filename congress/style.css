@@ -20,5 +20,124 @@ figcaption {
     text-align: center;
 }
 
+/* Small screens */
+@media only screen and (max-width: 800px) {
+    nav ul {
+        margin: 0;
+        padding: 0 2vw;
+        list-style-type: none;
+    }
+    
+    nav a {
+        display: block;
+        padding: .8rem;
+        text-decoration: none;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-align: center;
+        border-bottom: solid 1px rgb(233, 230, 230);
+        background: rgb(2,0,36);
+        background: linear-gradient(90deg, rgba(2,0,36,1) 29%, rgba(121,9,16,0.9738270308123249) 100%, rgba(0,212,255,1) 100%);
+    }
+
+    nav .active a {
+        background-color:#04b2d9;
+        background-image: linear-gradient(to bottom, #04b2d9, #04809c);
+        color: white;
+    }
+    } 
+    /*end of the media query*/
+    
+    /* BIG screens*/
+    @media only screen and (min-width: 801px) {
+        #navbar {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            background: #7F030B;
+            background: -webkit-linear-gradient(left, #7F030B, #0C1C46);
+            background: -moz-linear-gradient(left, #7F030B, #0C1C46);
+            background: linear-gradient(to right, #7F030B, #0C1C46);
+        }
+        
+        nav ul {
+            list-style-type: none;
+            padding: 0 2vw;
+            margin: 0;
+            display: flex;
+            
+        }
+        
+        nav a {
+        font-size: 1.1rem;
+        text-decoration: none;
+        color: #ffffff;
+        font-weight: 700;
+        display: block;
+        padding: 0.83rem 2rem ;
+        }
+        
+        nav li.active a {
+            background-color: rgb(29, 29, 65);
+        }
+        
+        nav a:hover {
+            background-color: rgb(29, 29, 65);
+        }
+    } 
+
+    /*Footer*/
+    #contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+        font-size: 2rem;
+      }
+      
+      #contact div#project, #contact div#touch {
+        padding-bottom: 2rem;
+        color: #f0f0f0;
+        font-family: 'Montserrat', sans-serif;
+        text-shadow: 4px 4px 4px rgb(158, 2, 2);
+        font-weight: bolder;
+      }
+      
+      #contact div#profiles {
+      display: flex;
+      justify-content: center;
+      color: #f0f0f0;
+      text-shadow: 4px 4px 4px rgb(158, 2, 2);
+      padding-bottom: 2em;
+      }
+      
+      #contact div#profiles a {
+      text-decoration: none;    
+      padding: 2rem;
+      color: #f0f0f0;
+      text-shadow: 4px 4px 4px rgb(158, 2, 2);
+      transition: transform 0.3s linear;
+      }
+      
+      #contact div#profiles a:hover {
+        transform: translateY(8px);
+      
+      }
+      
+      footer {
+        display: block;
+        background: #7F030B;
+            background: -webkit-linear-gradient(left, #7F030B, #0C1C46);
+            background: -moz-linear-gradient(left, #7F030B, #0C1C46);
+            background: linear-gradient(to right, #7F030B, #0C1C46);
+         text-align: center;
+         padding: 2rem;
+         padding-top: 5rem;
+         font-size: x-large;
+         color: #f0f0f0;
+         text-shadow: 4px 4px 4px rgb(158, 2, 2);
+         font-family: 'Montserrat', sans-serif;
+      }
 /*Cursor*/
  * {cursor: url(https://cur.cursors-4u.net/cursors/cur-8/cur719.cur), auto !important;} 
