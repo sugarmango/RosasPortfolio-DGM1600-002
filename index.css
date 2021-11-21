@@ -211,3 +211,6 @@ h2 {
     font-size: large;
     align-content: flex-start;
 }
+
+/*Cursor*/
+* {cursor: url(https://cur.cursors-4u.net/cursors/cur-9/cur265.cur), auto !important;}
