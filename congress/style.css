@@ -3,9 +3,42 @@
     box-sizing: border-box;
 }
 
+h1 {
+    font-family: 'Rock Salt', cursive;
+    font-weight: 700;
+    font-size: xx-large;
+    display: flex;
+    justify-content: center;
+    color: rgb(1, 1, 92);
+}
+
+h2 {
+    margin: 1em;
+    font-family: 'Rock Salt', cursive; 
+}
 .senators {
     display: flex;
     flex-wrap: wrap;
+}
+
+.weaselList {
+    margin: 1em;
+    font-family: 'Rock Salt', cursive;
+}
+
+.seniority {
+    font-family: 'Rock Salt', cursive;
+    font-weight: 700;
+    color: rgb(117, 4, 4);
+}
+
+button {
+    margin-left: 1em;
+    display: wrap;
+    justify-content: space-between;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-family: 'Rock Salt', cursive;
 }
 
 figure {
@@ -13,16 +46,27 @@ figure {
     display: flex;
     flex-direction: column;
     margin: 1em;
-    border: 2px solid pink;
+    color: white;
+    background: linear-gradient(-90deg, rgb(5, 1, 78) 29%, rgba(168, 10, 21, 0.974) 100%, rgba(0,212,255,1) 100%);
+    padding: 3px;
+}
+
+figure img:hover {
+    box-shadow: 0px 0px 25px rgba(7, 7, 7, 0.8);
 }
 
 figcaption {
     text-align: center;
+    font-family: 'Rock Salt', cursive;
+   font-size: small;
+   font-weight: 700;
 }
 
 /* Small screens */
 @media only screen and (max-width: 800px) {
     nav ul {
+        font-family: 'Rock Salt', cursive;
+        color: white;
         margin: 0;
         padding: 0 2vw;
         list-style-type: none;
@@ -31,9 +75,10 @@ figcaption {
     nav a {
         display: block;
         padding: .8rem;
-        text-decoration: none;
         font-weight: 700;
-        text-transform: uppercase;
+        font-family: 'Rock Salt', cursive;
+        color: white;
+        text-decoration: none;
         text-align: center;
         border-bottom: solid 1px rgb(233, 230, 230);
         background: rgb(2,0,36);
@@ -41,8 +86,7 @@ figcaption {
     }
 
     nav .active a {
-        background-color:#04b2d9;
-        background-image: linear-gradient(to bottom, #04b2d9, #04809c);
+        background-image: linear-gradient(to bottom, #790202, #d35252);
         color: white;
     }
     } 
@@ -54,6 +98,8 @@ figcaption {
             display: flex;
             justify-content: center;
             width: 100%;
+            font-family: 'Rock Salt', cursive;
+            font-weight: 700;
             background: #7F030B;
             background: -webkit-linear-gradient(left, #7F030B, #0C1C46);
             background: -moz-linear-gradient(left, #7F030B, #0C1C46);
@@ -72,7 +118,6 @@ figcaption {
         font-size: 1.1rem;
         text-decoration: none;
         color: #ffffff;
-        font-weight: 700;
         display: block;
         padding: 0.83rem 2rem ;
         }
