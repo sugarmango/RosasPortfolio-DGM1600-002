@@ -4,7 +4,7 @@
 }
 
 h1 {
-    font-family: 'Rock Salt', cursive;
+    font-family: 'Merienda', cursive;
     font-weight: 700;
     font-size: xx-large;
     display: flex;
@@ -14,7 +14,7 @@ h1 {
 
 h2 {
     margin: 1em;
-    font-family: 'Rock Salt', cursive; 
+    font-family: 'Merienda', cursive;
 }
 .senators {
     display: flex;
@@ -23,11 +23,11 @@ h2 {
 
 .weaselList {
     margin: 1em;
-    font-family: 'Rock Salt', cursive;
+    font-family: 'Merienda', cursive;
 }
 
 .seniority {
-    font-family: 'Rock Salt', cursive;
+    font-family: 'Merienda', cursive;
     font-weight: 700;
     color: rgb(117, 4, 4);
 }
@@ -38,7 +38,7 @@ button {
     justify-content: space-between;
     margin-top: 25px;
     margin-bottom: 25px;
-    font-family: 'Rock Salt', cursive;
+    font-family: 'Merienda', cursive;
 }
 
 figure {
@@ -57,7 +57,7 @@ figure img:hover {
 
 figcaption {
     text-align: center;
-    font-family: 'Rock Salt', cursive;
+    font-family: 'Merienda', cursive;
    font-size: small;
    font-weight: 700;
 }
@@ -65,7 +65,7 @@ figcaption {
 /* Small screens */
 @media only screen and (max-width: 800px) {
     nav ul {
-        font-family: 'Rock Salt', cursive;
+        font-family: 'Merienda', cursive;
         color: white;
         margin: 0;
         padding: 0 2vw;
@@ -76,7 +76,7 @@ figcaption {
         display: block;
         padding: .8rem;
         font-weight: 700;
-        font-family: 'Rock Salt', cursive;
+        font-family: 'Merienda', cursive;
         color: white;
         text-decoration: none;
         text-align: center;
@@ -98,7 +98,7 @@ figcaption {
             display: flex;
             justify-content: center;
             width: 100%;
-            font-family: 'Rock Salt', cursive;
+            font-family: 'Merienda', cursive;
             font-weight: 700;
             background: #7F030B;
             background: -webkit-linear-gradient(left, #7F030B, #0C1C46);
