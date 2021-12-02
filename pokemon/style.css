@@ -1,6 +1,8 @@
 * {
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Fuzzy Bubbles', cursive;
+    font-weight: 700;
 }
 
 .pokeGrid {
@@ -49,3 +51,5 @@
 figure img {
     width: 200px;
   }
+
+ * {cursor: url(https://cur.cursors-4u.net/games/gam-13/gam1282.cur), auto !important;} 
