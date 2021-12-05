@@ -1,4 +1,78 @@
-header {
+* {
+  box-sizing: border-box;
+  font-weight: 700;
+}
+
+/*Navbar*/
+/*Nav*/
+/* Small screens */
+@media only screen and (max-width: 800px) {
+  nav ul {
+    font-family: 'Rock Salt', cursive;
+      color: white;
+      margin: 0;
+      padding: 0 2vw;
+      list-style-type: none;
+  }
+  
+  nav a {
+      display: block;
+      padding: .8rem;
+      font-weight: 700;
+      font-family: 'Rock Salt', cursive;
+      color: white;
+      text-decoration: none;
+      text-align: center;
+      border-bottom: solid 1px rgb(233, 230, 230);
+      background-image: linear-gradient(315deg, #f9c5d1 0%, #9795ef 74%);
+  }
+
+  nav .active a {
+      background-image:#d16ba5;
+      color: white;
+  }
+  } 
+  /*end of the media query*/
+  
+  /* BIG screens*/
+  @media only screen and (min-width: 801px) {
+      #navbar {
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          height: 100%;
+          font-family: 'Rock Salt', cursive;
+          font-weight: 700;
+          background-image: linear-gradient(315deg, #f9c5d1 0%, #9795ef 74%);
+      }
+      
+      nav ul {
+          list-style-type: none;
+          padding: 0 2vw;
+          margin: 0;
+          display: flex;
+          
+      }
+      
+      nav a {
+      font-size: 1.1rem;
+      text-decoration: none;
+      color: #ffffff;
+      text-shadow: 4px 4px 4px #f1a7f1;
+      display: block;
+      padding: 0.83rem 2rem ;
+      }
+      
+      nav li.active a {
+          background-color: #8b89f5;
+      }
+      
+      nav a:hover {
+          background-color:#f1a7f1;
+      }
+  } 
+
+h1 {
     font-size:xx-large;
     font-family: 'Rock Salt', cursive;
     background-color: #fad0c4;
@@ -6,6 +80,7 @@ background-image: linear-gradient(315deg, #fad0c4 0%, #f1a7f1 74%);
     font-weight: bolder;
     color: ivory;
     display: flex;
+    margin: 0%;
     justify-content: center;
     text-decoration: none;
     text-transform: uppercase;
@@ -92,6 +167,3 @@ footer {
 /* Start of cursor */
 * {cursor: url(https://cur.cursors-4u.net/mechanics/mec-2/mec156.cur), auto !important;} 
 /* End of cursor */
-
-/*background-color: #5de6de;
-background-image: linear-gradient(315deg, #5de6de 0%, #b58ecc 74%);

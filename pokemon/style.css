@@ -71,19 +71,26 @@
           background-color:#c777b9;
       }
   } 
-
+  
+header div {
+  display:flex;
+  justify-content: center;
+  width: 100%;
+}
   h1 {
     background: -webkit-linear-gradient(#8aa7ec, #c777b9, #52cffe);
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent; 
 display: flex; 
 justify-content: center;
-font-size: 50px
+font-size: 80px;
+padding: 10px 0px;
 }
 
-.pikachu {
-display: wrap;
-flex-wrap: wrap;
+#pikachu {
+  width: 100px;
+  height: 100px;
+  margin: 10px 0px;
 }
 
 /*Buttons*/
@@ -92,12 +99,13 @@ button {
   font-weight:bolder;
   border: 2px solid #c777b9;
   border-radius: 0px;
-  padding: 18px 36px;
+  padding: 10px 36px;
+  margin: 20px 10px;
   display: wrap;
   justify-content: space-between;
   text-align: center;
   font-family: 'Fuzzy Bubbles', cursive;
-  font-size: 14px;
+  font-size: 16px;
   letter-spacing: 1px;
   cursor: pointer;
   box-shadow: inset 0 0 0 0 #c777b9;
