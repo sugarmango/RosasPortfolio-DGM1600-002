@@ -142,6 +142,9 @@ button {
 
   figcaption {
 text-align: center;
+text-transform: capitalize;
+font-size: 130%;
+line-height: 3em;
   } 
 
   label.textContents {
