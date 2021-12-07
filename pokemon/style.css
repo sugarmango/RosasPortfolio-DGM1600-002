@@ -133,13 +133,23 @@ button {
   text-align: center;
 }
 
+
 .pokeGrid {
     display: flex;
     flex-wrap: wrap;
+    min-height: 500px;
+  }
+
+  figcaption {
+text-align: center;
+  } 
+
+  label.textContents {
+text-align: center;
   }
 
 .scene {
-    width: 200px;
+  width: 200px;
   height: 260px;
   margin: .5em;
   perspective: 600px;
@@ -162,6 +172,11 @@ button {
     position: absolute;
     backface-visibility: hidden;
 }
+.cardFace h4 {
+  text-align: center;
+  padding-top: 10px;
+  font-size: larger;
+}
 
 .card.is-flipped {
     transform: rotateY(180deg);
@@ -172,7 +187,7 @@ button {
 }
 
 .back {
-    background-color: rgb(185, 238, 238);
+  background-image: linear-gradient(to right bottom, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
     transform: rotateY(180deg);
 }
 
@@ -182,15 +197,15 @@ figure img {
 
   /*Contact*/
   #contact {
+    padding-top: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 325px;
     background-image: linear-gradient(to right bottom, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
     font-size: 2rem;
 }
-
+  
 #contact h2, h4, h5 {
     padding-bottom: 2rem;
     color: #f0f0f0;
