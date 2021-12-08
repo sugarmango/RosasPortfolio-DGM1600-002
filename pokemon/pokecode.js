@@ -20,7 +20,7 @@ function loadPokemon(offset = 0, limit = 25) {
   })
 }
 
-loadPokemon(200, 5)
+loadPokemon(200, 25)
 
 const pokeGrid = document.querySelector('.pokeGrid')
 const loadButton = document.querySelector('.loadPokemon')
@@ -29,10 +29,10 @@ loadButton.addEventListener('click', () => {
   loadPokemon(100, 50)
 })
 
-/* First, get a reference to the pokemon choice button, 
-Second, add event Listener on click,
-Third, use getAPIData with a URL like this https://pokeapi.co/api/v2/$(promptedNameOrId),
-Fourth, populatePokeCard with the pokemon data retrieved*/
+/* First, get a reference to the pokemon choice button
+Second, add an event listener on click
+Third, use getAPIData with a URL like this https://pokeapi.co/api/v2/${promptedNameOrId}
+Fourth, populatePokeCard with the pokemon data retrieved */
 
 const moreButton = document.querySelector('.morePokemon')
 moreButton.addEventListener('click', () => {
@@ -49,11 +49,13 @@ newButton.addEventListener('click', () => {
   let pokeAbilities = prompt(
     'What are your Pokemon abilities? (use a comma separated list)',
   )
+  let pokeTypes = prompt("What are your Pokemon's types? (up to 2 types separated by a space)")
   let newPokemon = new Pokemon(
     pokeName,
     pokeHeight,
     pokeWeight,
     getAbilitiesArray(pokeAbilities),
+    getTypesArray(pokeTypes)
   )
   populatePokeCard(newPokemon)
 })
@@ -69,14 +71,25 @@ function getAbilitiesArray(commaString) {
   })
 }
 
+function getTypesArray(spacedString) {
+  let tempArray = spacedString.split(' ')
+  return tempArray.map((typeName) => {
+    return {
+      type: {
+        name: typeName
+      }
+    }
+  })
+}
+
 class Pokemon {
   constructor(name, height, weight, abilities, types) {
     this.id = 100,
-    this.name = name,
+      this.name = name,
       this.height = height,
       this.weight = weight,
       this.abilities = abilities,
-      this.types = types,
+      this.types = types
   }
 }
 
@@ -106,14 +119,12 @@ function populateCardFront(pokemon) {
 
   const pokeCaption = document.createElement('figcaption')
 
-  console.log(pokemon.name[0].toUpperCase(), pokemon.name)
-
-  //pokeCaption.textContent = `${pokemon.name[0].toUpperCase$(pokemon.name.slice(1))}`
+  //pokeCaption.textContent = `${pokemon.name[0].toUpperCase()}${pokemon.name.slice(1)}`
   pokeCaption.textContent = pokemon.name
   pokeFront.appendChild(pokeImg)
   pokeFront.appendChild(pokeCaption)
 
-  //typesBackground(pokemon, pokeFront)
+  typesBackground(pokemon, pokeFront)
   return pokeFront
 }
 
@@ -124,46 +135,68 @@ function typesBackground(pokemon, card) {
   if(!pokeType2) {
     card.style.setProperty('background', getPokeTypeColor(pokeType1))
   } else {
-  card.style.setProperty(
-    'background',
-    `linear-gradient(${getPokeTypeColor(pokeType1)}, $(getPokeTypeColor(ookeType2)})`),
-  )
+    card.style.setProperty(
+      'background',
+      `linear-gradient(${getPokeTypeColor(pokeType1)}, ${getPokeTypeColor(pokeType2)})`,
+    )
+  }
 }
 
 function getPokeTypeColor(pokeType) {
   let color
   switch (pokeType) {
+    case 'ice':
+    color = '#A3CDD9'
+      break
+    case 'fairy':
+    color = '#FFE1DA'
+    break
+    case 'steel':
+    color = '#737272'
+    break
+      case 'rock':
+      color = '#BFBFBF'
+      break
     case 'grass':
-      color = '#00FF00'
+      color = '#DCF5DC'
       break
     case 'fire':
-      color = '#FF0000'
+      color = '#D95F69'
       break
     case 'water':
-      color = '#0000FF'
+      color = '#B6D6F2'
       break
     case 'bug':
-      color = '#7FFF00'
+      color = '#FFFEA4'
       break
     case 'normal':
       color = '#F5F5DC'
       break
     case 'flying':
-      color = '#00FFFF'
+      color = '#C2DDC8'
       break
     case 'poison':
-      color = '#C300FF'
+      color = '#CEB3F2'
       break
     case 'electric':
-      color = '#C8FF00'
+      color = '#F2F2F2'
       break
       case 'psychic':
-        color = '#333333'
+        color = '#FFDEEE'
+        break
+        case 'ground':
+        color = '#D9AE79'
+        break
+        case 'dark':
+        color = '#262626'
+        break
+        case 'fighting':
+        color = '#7E8054'
         break
     default:
-      color = '#888888'
+      color = '#D9D9D9'
   }
-  return color 
+  return color
 }
 
 function populateCardBack(pokemon) {
@@ -178,13 +211,13 @@ function populateCardBack(pokemon) {
     listItem.textContent = abilityItem.ability.name
     abilityList.appendChild(listItem)
   })
-  const typelist = document.createElement('ol')
+  const typeslist = document.createElement('ol')
   pokemon.types.forEach((pokeType) => {
     let typeItem = document.createElement('li')
     typeItem.textContent = pokeType.type.name
     typeslist.appendChild(typeItem)
   })
   pokeBack.appendChild(abilityList)
-  pokeBack.appendChild((typelist))
+  pokeBack.appendChild(typeslist)
   return pokeBack
 }
