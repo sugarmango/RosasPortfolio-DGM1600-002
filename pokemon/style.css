@@ -199,7 +199,7 @@ figure img {
   }
 
   /*Contact*/
-  #contact {
+#contact {
     padding-top: 30px;
     display: flex;
     flex-direction: column;

@@ -23,7 +23,7 @@ section {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	background-color: pink;
+	;
 }
 
 .box {
@@ -37,6 +37,49 @@ section {
     color: pink;
 }
 
+#contact {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to right bottom, #4d032d, #640252, #47035c);
+    font-size: 2rem;
+}
+
+#contact p {
+	padding-bottom: 2rem;
+    color: #f0f0f0;
+    font-family: 'Rock Salt', cursive;
+    text-shadow: 4px 4px 4px #c777b9;
+	font-size: 0.7em;
+}
+
+#contact h1, h2, h4, h5 {
+    padding-bottom: 2rem;
+    color: #f0f0f0;
+    font-family: 'Rock Salt', cursive;
+    text-shadow: 4px 4px 4px #c777b9;
+}
+
+#contact div {
+display: flex;
+justify-content: center;
+color: #f0f0f0;
+text-shadow: 4px 4px 4px#c777b9;
+}
+
+#contact div a {
+padding: 2rem;
+color: #f0f0f0;
+text-shadow: 4px 4px 4px #c777b9;
+transition: transform 0.3s linear;
+}
+
+#contact div a:hover {
+    transform: translateY(8px);
+
+}
 a {
 	font-size: x-large;
 	color: rgb(194, 142, 151);
