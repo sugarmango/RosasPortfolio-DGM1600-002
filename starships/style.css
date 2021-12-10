@@ -13,9 +13,34 @@ header, footer {
 	display: flex;
 }
 
-.nav {
-	margin-left: 2em;
-}
+#navbar {   
+    width: 100%;
+    background-image: linear-gradient(to right bottom, #4d032d, #640252, #47035c);
+    position: fixed;
+    }
+    
+    .nav-list {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    margin-right: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    }
+    
+    
+    .nav-list a {
+        display: block;
+        color: #f0f0f0;
+        text-shadow: 4px 4px 4px pink;
+        padding: 1.5rem;
+        font-size: xx-large;
+    }
+    
+    .nav-list a:hover {
+        background-color:#F2B6CC;
+    }
+    
 
 section {
 	width: 100%;
