@@ -20,13 +20,54 @@ function loadPokemon(offset = 0, limit = 25) {
   })
 }
 
-loadPokemon(200, 25)
-
 const pokeGrid = document.querySelector('.pokeGrid')
 const loadButton = document.querySelector('.loadPokemon')
 loadButton.addEventListener('click', () => {
   removeChildren(pokeGrid)
   loadPokemon(100, 50)
+  setTimeout(() => loadPokemon(100, 50), 3000)
+})
+
+const allPokemon = await getAllSimplePokemon()
+
+async function getAllSimplePokemon() {
+  const allPokemon = []
+  await getAPIData(
+    `https://pokeapi.co/api/v2/pokemon?limit=1118&offset=0`,
+  ).then(async (data) => {
+    for (const pokemon of data.results) {
+      await getAPIData(pokemon.url).then((pokeData) => {
+        const mappedPokemon = {
+          abilities: pokeData.abilities,
+          height: pokeData.height,
+          id: pokeData.id,
+          name: pokeData.name,
+          types: pokeData.types,
+          weight: pokeData.weight,
+        }
+        allPokemon.push(mappedPokemon)
+      })
+    }
+  })
+  return allPokemon
+}
+
+function getAllPokemonByType(type) {
+  return allPokemon.filter((pokemon) => pokemon.types[0].type.name == type)
+}
+
+const sortButton = document.querySelector('.sortButton')
+sortButton.addEventListener('click', () => {
+  const allByType = getAllPokemonByType('water')
+  allByType.forEach((item) => populatePokeCard(item))
+})
+
+const typeSelector = document.querySelector('#typeSelector')
+typeSelector.addEventListener('change', (event) => {
+  const usersTypeChoice = event.target.value.toLowerCase()
+  const allByType = getAllPokemonByType(usersTypeChoice)
+  removeChildren(pokeGrid)
+  allByType.forEach((item) => populatePokeCard(item))
 })
 
 /* First, get a reference to the pokemon choice button
@@ -49,7 +90,9 @@ newButton.addEventListener('click', () => {
   let pokeAbilities = prompt(
     'What are your Pokemon abilities? (use a comma separated list)',
   )
-  let pokeTypes = prompt("What are your Pokemon's types? (up to 2 types separated by a space)")
+  let pokeTypes = prompt(
+    "What are your Pokemon's types? (up to 2 types separated by a space)",
+  )
   let newPokemon = new Pokemon(
     pokeName,
     pokeHeight,
@@ -84,13 +127,13 @@ function getTypesArray(spacedString) {
 
 class Pokemon {
   constructor(name, height, weight, abilities, types) {
-    this.id = 100,
-      this.name = name,
-      this.height = height,
-      this.weight = weight,
-      this.abilities = abilities,
-      this.types = types
-  }
+    ;(this.id = 9001),
+    (this.name = name),
+    (this.height = height),
+    (this.weight = weight),
+    (this.abilities = abilities),
+    (this.types = types)
+}
 }
 
 function populatePokeCard(singlePokemon) {
@@ -115,7 +158,11 @@ function populateCardFront(pokemon) {
   const pokeFront = document.createElement('figure')
   pokeFront.className = 'cardFace front'
   const pokeImg = document.createElement('img')
-  pokeImg.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`
+  if (pokemon.id === 9001) {
+    pokeImg.src = '../images/pokeball.png'
+  } else {
+    pokeImg.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`
+  }
 
   const pokeCaption = document.createElement('figcaption')
 
@@ -135,9 +182,11 @@ function typesBackground(pokemon, card) {
   if(!pokeType2) {
     card.style.setProperty('background', getPokeTypeColor(pokeType1))
   } else {
-    card.style.setProperty(
+     card.style.setProperty(
       'background',
-      `linear-gradient(${getPokeTypeColor(pokeType1)}, ${getPokeTypeColor(pokeType2)})`,
+      `linear-gradient(${getPokeTypeColor(pokeType1)}, ${getPokeTypeColor(
+        pokeType2,
+      )})`,
     )
   }
 }
@@ -193,6 +242,9 @@ function getPokeTypeColor(pokeType) {
         case 'fighting':
         color = '#7E8054'
         break
+        case 'dragon':
+        color = '#d86f58'
+        break
     default:
       color = '#D9D9D9'
   }
@@ -219,5 +271,23 @@ function populateCardBack(pokemon) {
   })
   pokeBack.appendChild(abilityList)
   pokeBack.appendChild(typeslist)
+
+  //  add HP and height and weight
+  if (pokemon.stats) {
+    const pokeHP = document.createElement('h4')
+    pokeHP.textContent = `HP: ${pokemon.stats[0].base_stat}`
+    pokeBack.appendChild(pokeHP)
+  }
+
+  const pokeHeight = document.createElement('h5')
+  pokeHeight.textContent = `Height: ${pokemon.height}`
+
+  const pokeWeight = document.createElement('h5')
+  pokeWeight.textContent = `Weight: ${pokemon.weight}`
+
+
+
+  pokeBack.appendChild(pokeHeight)
+  pokeBack.appendChild(pokeWeight)
   return pokeBack
 }
