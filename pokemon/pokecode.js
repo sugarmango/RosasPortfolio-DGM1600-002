@@ -8,6 +8,45 @@ function getAPIData(url) {
   }
 }
 
+const searchInputWrapper = document.querySelector(".search-input-wrapper");
+const searchInput = document.querySelector(".search-input input");
+const searchIcon = document.querySelector(".search-icon i");
+const closeIcon = document.querySelector(".search-input i ");
+
+searchIcon.addEventListener("click", () => {
+  searchIcon.parentElement.classList.add("change");
+  searchInputWrapper.classList.add("change");
+
+  setTimeout(() => {
+    searchInput.focus();
+  }, 1000);
+});
+
+closeIcon.addEventListener("click", () => {
+  searchIcon.parentElement.classList.remove("change");
+  searchInputWrapper.classList.remove("change");
+});
+
+//Need to fix search function//
+function search_pokemon() {
+var input, filter, ul, li, a, i, txtValue;
+input = document.getElementsByName('pokeName');
+filter = input.value.toLowerCase();
+ul = document.getElementById("myUL");
+li = ul.getElementsByTagName('li');
+
+for (i = 0; i < li.length; i++) {
+  a = li[i].getElementsByTagName("a")[0];
+  txtValue = a.textContent || a.innerText;
+  if (txtValue.toUpperCase().indexOf(filter) > -1) {
+    li[i].style.display = "";
+  } else {
+    li[i].style.display = "none";
+  }
+}
+}
+
+
 function loadPokemon(offset = 0, limit = 25) {
   getAPIData(
     `https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`,

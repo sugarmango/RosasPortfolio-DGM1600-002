@@ -33,6 +33,97 @@
       color: white;
   }
   } 
+
+  /*Search*/
+  .search-input-wrapper {
+    width: 100%;
+    height: 5rem;
+    background-image: linear-gradient(to right bottom, #d16ba5, #c777b9, #ba83ca);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+  }
+  
+  .search-input-wrapper.change {
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.5s 1s;
+  }
+  
+  .search-input {
+    width: 30rem;
+    display: flex;
+    align-items: flex-end;
+  }
+  
+  .search-input input {
+    width: 27rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: 0.1rem solid #fff;
+    font-size: 1.5rem;
+    letter-spacing: 0.15rem;
+    outline: none;
+    color: #fff;
+    margin-right: 1rem;
+  }
+  
+  .search-input i {
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .search-icon {
+    font-size: 1.5rem;
+    position:absolute;
+    top: 4rem;
+    animation: searchIconAnim2 0.5s forwards;
+  }
+  
+  .search-icon.change {
+    animation: searchIconAnim 1s forwards;
+  }
+  
+  .search-icon i {
+    color: #ba83ca;
+    cursor: pointer;
+  }
+  
+  @keyframes searchIconAnim {
+    0% {
+      top: 1.7rem;
+    }
+  
+    40% {
+      top: 40%;
+      font-size: 25rem;
+    }
+  
+    60% {
+      top: 40%;
+      right: calc(50% + 16rem);
+    }
+  
+    100% {
+      top: 1.7rem;
+      right: calc(50% + 16rem);
+    }
+  }
+  
+  @keyframes searchIconAnim2 {
+    0% {
+      right: calc(50% + 16rem);
+    }
+  
+    100% {
+      right: 3rem;
+    }
+  }
+
   /*end of the media query*/
   
   /* BIG screens*/
@@ -94,7 +185,7 @@ padding: 10px 0px;
 }
 
 /*Buttons*/
-button {
+button, #typeSelector {
   color: #8aa7ec;
   font-weight:bolder;
   border: 2px solid #c777b9;
@@ -124,6 +215,10 @@ button {
 
 .morePokemon:hover {
   box-shadow: inset 0 0 0 50px #c777b9;
+}
+
+.sortButton:hover {
+  box-shadow: inset 0 100px 0 0 #c777b9;
 }
 
 
