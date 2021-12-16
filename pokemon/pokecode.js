@@ -27,24 +27,33 @@ closeIcon.addEventListener("click", () => {
   searchInputWrapper.classList.remove("change");
 });
 
-//Need to fix search function//
-function search_pokemon() {
-var input, filter, ul, li, a, i, txtValue;
-input = document.getElementsByName('pokeName');
-filter = input.value.toLowerCase();
-ul = document.getElementById("myUL");
-li = ul.getElementsByTagName('li');
+document.getElementById('pokename').addEventListener('keyup', function (event) {
+  var pokemonList = []
+  if (event.keyCode ===13) {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById('pokename');
+    
+    console.log (input.value)
+  
 
-for (i = 0; i < li.length; i++) {
-  a = li[i].getElementsByTagName("a")[0];
-  txtValue = a.textContent || a.innerText;
-  if (txtValue.toUpperCase().indexOf(filter) > -1) {
-    li[i].style.display = "";
-  } else {
-    li[i].style.display = "none";
+    
+    
+    filter = input.value.toLowerCase();
+    for(const pokemon of allPokemon) {
+      if (pokemon.name.includes (filter)) {
+        pokemonList.push(pokemon)
+      }
+      
+    }
+    removeChildren(pokeGrid)
+    
+    pokemonList.forEach((pokemon) => populatePokeCard(pokemon));
+  pokemonList.length = 0 
   }
-}
-}
+ 
+  })
+//Need to fix search function//
+
 
 
 function loadPokemon(offset = 0, limit = 25) {
@@ -198,7 +207,7 @@ function populateCardFront(pokemon) {
   pokeFront.className = 'cardFace front'
   const pokeImg = document.createElement('img')
   if (pokemon.id === 9001) {
-    pokeImg.src = '../images/pokeball.png'
+    pokeImg.src = '../images/pokeball1.png'
   } else {
     pokeImg.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`
   }
@@ -217,7 +226,7 @@ function populateCardFront(pokemon) {
 function typesBackground(pokemon, card) {
   let pokeType1 = pokemon.types[0].type.name
   let pokeType2 = pokemon.types[1]?.type.name
-  console.log(pokeType1, pokeType2)
+  
   if(!pokeType2) {
     card.style.setProperty('background', getPokeTypeColor(pokeType1))
   } else {

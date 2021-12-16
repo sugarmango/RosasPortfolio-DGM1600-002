@@ -16,7 +16,6 @@ header, footer {
 #navbar {   
     width: 100%;
     background-image: linear-gradient(to right bottom, #4d032d, #640252, #47035c);
-    position: fixed;
     }
     
     .nav-list {
@@ -24,7 +23,7 @@ header, footer {
     justify-content: flex-end;
     list-style-type: none;
     margin-right: 1rem;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Rock Salt', cursive;
     font-weight: bold;
     }
     
@@ -48,7 +47,11 @@ section {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	;
+    color: #f0f0f0;
+}
+
+section#title div h1 {
+    color: #f0f0f0;
 }
 
 .box {
@@ -91,7 +94,7 @@ section {
 display: flex;
 justify-content: center;
 color: #f0f0f0;
-text-shadow: 4px 4px 4px#c777b9;
+text-shadow: 4px 4px 4px #c777b9;
 }
 
 #contact div a {
@@ -103,8 +106,8 @@ transition: transform 0.3s linear;
 
 #contact div a:hover {
     transform: translateY(8px);
-
 }
+
 a {
 	font-size: x-large;
 	color: rgb(194, 142, 151);
@@ -112,7 +115,8 @@ a {
 }
 
 a li {
-	background-color: rgb(194, 189, 189);
+    color: #f0f0f0;
+
 }
 
 li:hover {
